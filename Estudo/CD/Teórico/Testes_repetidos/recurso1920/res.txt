@@ -1,0 +1,25 @@
+1- c)
+2- b)
+3- c)
+4- b)
+5- d)
+6- a)
+7- c)
+8- a)
+9- b)
+10-d)
+11- d)
+12- a) ?
+13-  Message broker é um sistema de fila de mensagens onde é utilizado um protocolo.
+Permite que aplicações, sistemas e serviços comuniquem e troquem informação, através do
+envio de mensagens.
+Tem como funções: a transformação das mensagens num determinado formato predefinido, funcionalidades de roteamento e application gateway.
+14- Considerando N processos, P0 até Pn-1, onde cada processo possui um id (id Pi=i), o algoritmo de eleição por bullying consiste:
+
+1) O processo Pi repara que o leader não está a responder a pedidos, inicia então a eleição
+
+2) Pi envia uma mensagem de eleição, ELECTION, a todos os processos cujos identificadores sejam maiores que o seu
+
+3) Se ninguém responder, Pi torna-se o leader e envia uma mensagem a avisar todos os outros
+
+4) Se alguém reponder, esse mesmo processo repete o algoritmo

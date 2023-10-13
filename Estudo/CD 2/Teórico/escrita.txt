@@ -1,0 +1,11 @@
+As de escrita foram
+1. Uma Relógios Lógicos vs Relógios digitais, vantagens e desvantagens de cada um
+
+2. A outra era os problemas encontrados na replicação e como tratar
+
+
+3. Outra era para descrever o Paxos
+
+4. Outra era sobre uma tabela dos resumos, aquela de 4 entradas
+
+o resto das escolhas múltiplas, foram comuns para mim algumas que já tinham saído nos leaks, só deixei uma que era sobre o 2PC

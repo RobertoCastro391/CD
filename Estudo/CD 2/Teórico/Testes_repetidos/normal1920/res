@@ -1,0 +1,23 @@
+0.
+1- d)
+2- a)
+3- a)
+4- b)
+5- a)
+6- c)
+7- c)
+8- a)
+9- Hardware -> Infrastructure -> Platforms -> Application
+10- d) ? maybe c)
+11- c) ?
+12- d)
+13- Fácil acessibilidade dos recursos, garantir transparência, ser aberto e ser escalável
+
+14- Multithreading -> multiple threads share the same code, data, and files but run on a different register and stack, quick to create and less resources. 
+Multiprocessing -> multiplies a single processor — replicating the code, data, and files, which incurs more overhead, however more reliable and scalable.
+
+Multithreading is useful for IO-bound processes, such as reading files from a network or database since each thread can run the IO-bound process concurrently. Multiprocessing is useful for CPU-bound processes, such as computationally heavy tasks since it will benefit from having multiple processors; similar to how multicore computers work faster than computers with a single core.
+
+Note that using multithreading for CPU-bound processes might slow down performance due to competing resources that ensure only one thread can execute at a time, and overhead is incurred in dealing with multiple threads.
+
+On the other hand, multiprocessing can be used for IO-bound processes. However, overhead for managing multiple processes is higher than managing multiple threads as illustrated above. You may notice that multiprocessing might lead to higher CPU utilization due to multiple CPU cores being used by the program, which is expected.

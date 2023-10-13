@@ -1,0 +1,40 @@
+Protocolo
+
+'MESSAGE':
+Uma superclasse que contém uma propriedade "command" e um método para serializar esse atributo no formato JSON.
+
+
+'Subscribe_Topic':
+Uma subclasse de Message usada para subscrever um certo canal de chat, contendo propriedades de Type e Topic e um método para formatar a mensagem assinada em um dicionário JSON.
+
+	Consumer -> Broker : {"command":"SUBSCRIBE" ,"type":"JSONQueue" or Serializer.JSON ,topic:"topic"}
+
+
+'Publish_Message':
+Outra subclasse de Message usada para publicar uma mensagem em um canal de chat e contém as propriedades "type", "topic" e "message", bem como métodos para formatar a mensagem post com um dicionário JSON.
+
+	Producer -> Broker/Consumer : {"command":"PUBLISH" ,"type":"JSONQueue" or Serializer.JSON ,topic:"topic" ,message:"message"}
+	
+	
+'Request_List':
+Subclasse de mensagem usada para listar tópicos disponíveis no servidor de chat. Ele contém uma propriedade "type" e um método para formatar a mensagem de solicitação de lista em um dicionário JSON.
+
+	Consumer -> Broker : {"command":"LIST" ,"type":"JSONQueue" or Serializer.JSON}
+	
+
+'Response_List':
+Outra subclasse de Message que é usada para enviar uma lista de tópicos disponíveis para um cliente. Ele contém uma propriedade "topic_list" e um método para formatar a mensagem da lista de resposta em um dicionário JSON.
+
+	Broker -> Consumer : {"command":"LIST" ,"type":"JSONQueue" or Serializer.JSON, "topic_list":"topic_list"}
+	
+
+'Cancel_Message':
+Uma subclasse de Message usada para cancelar a subscrição de um canal de chat. Contém propriedades e métodos 'type' e 'topic' para formatar mensagens de cancelamento em um dicionário JSON. 
+
+	Consumer -> Broker : {"command":"CANCEL" ,"type":"JSONQueue" or Serializer.JSON, "topic":"topic_"}
+
+
+'MBProto':
+Classe principal que implementa métodos para criar mensagens e enviar e receber mensagens em vários formatos (JSON, Pickle e XML). Ele também fornece métodos utilitários para enviar e receber dados de soquete. 
+
+	
